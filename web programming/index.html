@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Cafe | Cybersecurity Solutions</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="js/google-auth.js" defer></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <h1>Cyber Cafe</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Google Sign-In button -->
+    <div id="google-sign-in" class="g-signin-container"></div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <h1>Welcome to Cyber Cafe</h1>
+            <p>Your Partner in Cybersecurity Solutions</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>
+                Cyber Cafe specializes in providing state-of-the-art cybersecurity solutions, including training, prevention, and
+                protection against social engineering attacks.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3>Phishing Prevention</h3>
+                    <p>Learn how to identify and avoid phishing attempts.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Social Engineering Awareness</h3>
+                    <p>Stay updated on the latest social engineering tactics.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Workshops</h3>
+                    <p>Join our workshops on data security and incident response.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Custom Solutions</h3>
+                    <p>Get tailored solutions for your organization's security needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <blockquote>
+                <p>
+                    "Cyber Cafe transformed our approach to cybersecurity. Their insights are invaluable."
+                </p>
+                <footer>- Mark, CEO</footer>
+            </blockquote>
+            <blockquote>
+                <p>"I learned how to protect my business from hackers. Highly recommend Cyber Cafe!"</p>
+                <footer>- Arun, Entrepreneur</footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>For any cybersecurity assistance, reach out to us at:</p>
+            <p>Email: <a href="mailto:mdkamiljava@gmail.com">mdkamiljava@gmail.com</a></p>
+            <p>Follow us: 
+                <a href="https://www.linkedin.com/in/mohamedkamil666" target="_blank">LinkedIn</a> | 
+                <a href="https://github.com/Mohamedkamil06" target="_blank">GitHub</a>
+            </p>
+
+            <!-- Comment Section -->
+            <h2>Leave a Comment</h2>
+            <form action="https://formspree.io/f/mzzbvabv" method="POST" Formspree id="commentForm">
+
+
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Cyber Cafe. All Rights Reserved.</p>
+            <p> Coimbatore</p>
+        </div>
+    </footer>
+
+<body style="background-image: url('images/logo.jpg'); background-size: cover; background-position: center;">
+    <!-- Your content goes here -->
+
+</body>
+
+</body>
+
+<!-- JavaScript to handle form submission -->
+<script>
+    // Form submission logic
+    const formElement = document.getElementById('commentForm');
+    formElement.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form's default submission
+
+        // Send form data to Formspree
+        fetch('https://formspree.io/f/mzzbvabv', {
+            method: 'POST',
+            body: new FormData(formElement),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Form submitted successfully:', data);
+            alert('Your comment has been submitted!');
+            formElement.reset();
+        
+    });
+</script>
+
+</html>
